@@ -59,7 +59,8 @@ export default [
         Event: 'readonly',
         CustomEvent: 'readonly',
         KeyboardEvent: 'readonly',
-        MouseEvent: 'readonly'
+        MouseEvent: 'readonly',
+        __PUBLIC_ENABLE_ADS__: 'readonly'
       }
     },
     plugins: { svelte },

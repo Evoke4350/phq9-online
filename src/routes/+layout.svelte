@@ -5,7 +5,12 @@
   import Nav from '$lib/components/Nav.svelte';
   import Footer from '$lib/components/Footer.svelte';
   import { websiteSchema, organizationSchema } from '$lib/schema';
-  const globalLd = [websiteSchema(), organizationSchema()];
+  const globalLd = [websiteSchema(), organizationSchema()]
+    .map((b) => {
+      const tag = 'script';
+      return `<${tag} type="application/ld+json">${JSON.stringify(b).replace(/</g, '\\u003c')}</${tag}>`;
+    })
+    .join('');
   let { children } = $props();
 
   // Read the ads flag via the define constant injected by vite.config.ts.
@@ -18,7 +23,7 @@
   {#if adsEnabled}
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8001142558091314" crossorigin="anonymous"></script>
   {/if}
-  {@html globalLd.map((b) => `<script type="application/ld+json">${JSON.stringify(b).replace(/</g, '\\u003c')}</script>`).join('')}
+  {@html globalLd}
 </svelte:head>
 
 <ParaglideJS {i18n}>

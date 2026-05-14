@@ -12,11 +12,21 @@ type MockStorage = Storage & { _data: Record<string, string> };
 beforeEach(() => {
   globalThis.localStorage = {
     _data: {} as Record<string, string>,
-    getItem(k: string) { return (this as unknown as MockStorage)._data[k] ?? null; },
-    setItem(k: string, v: string) { (this as unknown as MockStorage)._data[k] = v; },
-    removeItem(k: string) { delete (this as unknown as MockStorage)._data[k]; },
-    clear() { (this as unknown as MockStorage)._data = {}; },
-    key() { return null; },
+    getItem(k: string) {
+      return (this as unknown as MockStorage)._data[k] ?? null;
+    },
+    setItem(k: string, v: string) {
+      (this as unknown as MockStorage)._data[k] = v;
+    },
+    removeItem(k: string) {
+      delete (this as unknown as MockStorage)._data[k];
+    },
+    clear() {
+      (this as unknown as MockStorage)._data = {};
+    },
+    key() {
+      return null;
+    },
     length: 0
   } as unknown as Storage;
 });
