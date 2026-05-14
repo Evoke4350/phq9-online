@@ -4,6 +4,7 @@
   import { saveAttempt } from '$lib/storage';
   import { settings, adsSuppressed } from '$lib/stores';
   import * as m from '$paraglide/messages';
+  import { t } from '$lib/messages';
 
   let { config } = $props<{ config: Screener }>();
   let answers: (number | null)[] = $state(Array(config.itemCount).fill(null));
@@ -47,7 +48,7 @@
     {#each config.items as item, idx}
       <fieldset class="rounded-md border border-[color:var(--color-border)] p-4">
         <legend class="px-2 text-sm font-medium">
-          {idx + 1}. {item.textKey}
+          {idx + 1}. {t(item.textKey)}
         </legend>
         <div class="mt-2 grid gap-2 sm:grid-cols-2">
           {#each config.scale.values as v, vi}
@@ -58,9 +59,9 @@
                 value={v}
                 checked={answers[idx] === v}
                 on:change={() => (answers[idx] = v)}
-                aria-label={config.scale.labelKeys[vi]}
+                aria-label={t(config.scale.labelKeys[vi]!)}
               />
-              <span>{config.scale.labelKeys[vi]}</span>
+              <span>{t(config.scale.labelKeys[vi]!)}</span>
             </label>
           {/each}
         </div>
