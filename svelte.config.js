@@ -12,6 +12,6 @@ export default {
       strict: true
     }),
     prerender: { handleHttpError: 'fail', handleMissingId: 'fail' },
-    alias: { $lib: 'src/lib' }
+    alias: { $lib: 'src/lib', $paraglide: 'src/paraglide' }
   }
 };
