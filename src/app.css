@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@theme {
+  --color-base: oklch(98% 0.005 95);
+  --color-base-2: oklch(96% 0.01 95);
+  --color-ink: oklch(20% 0.02 250);
+  --color-ink-2: oklch(40% 0.02 250);
+  --color-accent: oklch(55% 0.15 245);
+  --color-accent-2: oklch(45% 0.18 245);
+  --color-crisis: oklch(55% 0.2 30);
+  --color-crisis-2: oklch(45% 0.22 30);
+  --color-border: oklch(85% 0.01 250);
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-base: oklch(18% 0.015 250);
+    --color-base-2: oklch(24% 0.02 250);
+    --color-ink: oklch(94% 0.01 95);
+    --color-ink-2: oklch(75% 0.01 95);
+    --color-accent: oklch(70% 0.15 245);
+    --color-accent-2: oklch(80% 0.18 245);
+    --color-border: oklch(35% 0.015 250);
+  }
+}
+
+:root[data-theme="light"] {
+  --color-base: oklch(98% 0.005 95);
+  --color-ink: oklch(20% 0.02 250);
+}
+:root[data-theme="dark"] {
+  --color-base: oklch(18% 0.015 250);
+  --color-ink: oklch(94% 0.01 95);
+}
+
+html { scroll-behavior: smooth; }
+body { font-family: var(--font-sans); -webkit-font-smoothing: antialiased; background: var(--color-base); color: var(--color-ink); }
+:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; border-radius: 4px; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
