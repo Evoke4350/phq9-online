@@ -34,6 +34,9 @@ const createSettings = (): Writable<Settings> => {
 
 export const settings = createSettings();
 export const adsSuppressed = writable<boolean>(false);
+// Use __PUBLIC_ENABLE_ADS__ which is defined by vite.config.ts at build time.
+// Falls back to false when the env var is not set.
+declare const __PUBLIC_ENABLE_ADS__: string;
 export const adsEnabled = writable<boolean>(
-  typeof import.meta !== 'undefined' && (import.meta as any).env?.PUBLIC_ENABLE_ADS === 'true'
+  typeof __PUBLIC_ENABLE_ADS__ !== 'undefined' && __PUBLIC_ENABLE_ADS__ === 'true'
 );

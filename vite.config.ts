@@ -12,5 +12,10 @@ export default defineConfig({
     }),
     sveltekit()
   ],
+  define: {
+    // Make PUBLIC_ENABLE_ADS available as a build-time constant so code that
+    // cannot use $env/static/public (e.g. plain .ts modules) can still read it.
+    __PUBLIC_ENABLE_ADS__: JSON.stringify(process.env.PUBLIC_ENABLE_ADS ?? 'false')
+  },
   test: { include: ['tests/unit/**/*.{test,spec}.{js,ts}'] }
 });

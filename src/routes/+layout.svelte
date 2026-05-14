@@ -5,10 +5,16 @@
   import Nav from '$lib/components/Nav.svelte';
   import Footer from '$lib/components/Footer.svelte';
   let { children } = $props();
+
+  // Read the ads flag via the define constant injected by vite.config.ts.
+  // This works in both SSR (prerender) and client contexts, with or without
+  // the env var set — it always defaults to 'false'.
+  declare const __PUBLIC_ENABLE_ADS__: string;
+  const adsEnabled = typeof __PUBLIC_ENABLE_ADS__ !== 'undefined' && __PUBLIC_ENABLE_ADS__ === 'true';
 </script>
 
 <svelte:head>
-  {#if import.meta.env.PUBLIC_ENABLE_ADS === 'true'}
+  {#if adsEnabled}
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8001142558091314" crossorigin="anonymous"></script>
   {/if}
 </svelte:head>
