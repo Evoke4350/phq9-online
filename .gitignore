@@ -1,0 +1,12 @@
+node_modules
+/build
+/.svelte-kit
+/dist
+/playwright-report
+/test-results
+.env
+.env.*
+!.env.example
+src/paraglide
+.DS_Store
+*.log
