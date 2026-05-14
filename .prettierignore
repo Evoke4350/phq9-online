@@ -1,0 +1,7 @@
+build
+.svelte-kit
+src/paraglide
+node_modules
+package-lock.json
+*.md
+*.svelte
