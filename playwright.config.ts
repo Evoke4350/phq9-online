@@ -15,6 +15,7 @@ export default defineConfig({
     command: 'npx vite build && npx vite preview --port 4173',
     port: 4173,
     timeout: 120_000,
-    reuseExistingServer: !process.env.CI
+    reuseExistingServer: !process.env.CI,
+    env: { PUBLIC_ENABLE_ADS: 'true' }
   }
 });
