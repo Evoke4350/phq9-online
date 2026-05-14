@@ -9,7 +9,6 @@
   // Read the ads flag via the define constant injected by vite.config.ts.
   // This works in both SSR (prerender) and client contexts, with or without
   // the env var set — it always defaults to 'false'.
-  declare const __PUBLIC_ENABLE_ADS__: string;
   const adsEnabled = typeof __PUBLIC_ENABLE_ADS__ !== 'undefined' && __PUBLIC_ENABLE_ADS__ === 'true';
 </script>
 
