@@ -3,8 +3,20 @@ import type { Screener, SeverityBand } from './types';
 const REVERSE = new Set([3, 7, 11, 15]);
 
 const bands: SeverityBand[] = [
-  { min: 0, max: 15, labelKey: 'cesd_negative', severity: 'none', actionKey: 'cesd_action_negative' },
-  { min: 16, max: 60, labelKey: 'cesd_positive', severity: 'moderate', actionKey: 'cesd_action_positive' }
+  {
+    min: 0,
+    max: 15,
+    labelKey: 'cesd_negative',
+    severity: 'none',
+    actionKey: 'cesd_action_negative'
+  },
+  {
+    min: 16,
+    max: 60,
+    labelKey: 'cesd_positive',
+    severity: 'moderate',
+    actionKey: 'cesd_action_positive'
+  }
 ];
 
 export const cesd: Screener = {
@@ -24,7 +36,8 @@ export const cesd: Screener = {
   },
   bands,
   source: {
-    citation: 'Radloff LS. The CES-D Scale: A self-report depression scale for research in the general population. Appl Psychol Meas. 1977;1(3):385-401.',
+    citation:
+      'Radloff LS. The CES-D Scale: A self-report depression scale for research in the general population. Appl Psychol Meas. 1977;1(3):385-401.',
     doi: '10.1177/014662167700100306',
     license: 'Public domain; developed at NIMH.',
     publicDomain: true,
@@ -33,6 +46,10 @@ export const cesd: Screener = {
   score(answers) {
     return answers.reduce((s, v, i) => s + (REVERSE.has(i) ? 3 - v : v), 0);
   },
-  bandFor(score) { return bands.find((b) => score >= b.min && score <= b.max) ?? bands[bands.length - 1]!; },
-  flagFired() { return false; }
+  bandFor(score) {
+    return bands.find((b) => score >= b.min && score <= b.max) ?? bands[bands.length - 1]!;
+  },
+  flagFired() {
+    return false;
+  }
 };

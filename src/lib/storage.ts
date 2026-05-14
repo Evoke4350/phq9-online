@@ -50,9 +50,27 @@ export const exportJson = (): string => JSON.stringify(read(), null, 2);
 
 export const exportCsv = (): string => {
   const rows = read();
-  const header = ['id', 'screenerId', 'completedAt', 'locale', 'score', 'band', 'flagged', 'answers'];
+  const header = [
+    'id',
+    'screenerId',
+    'completedAt',
+    'locale',
+    'score',
+    'band',
+    'flagged',
+    'answers'
+  ];
   const body = rows.map((a) =>
-    [a.id, a.screenerId, a.completedAt, a.locale, a.score, a.band, a.flagged, a.answers.join('|')].join(',')
+    [
+      a.id,
+      a.screenerId,
+      a.completedAt,
+      a.locale,
+      a.score,
+      a.band,
+      a.flagged,
+      a.answers.join('|')
+    ].join(',')
   );
   return [header.join(','), ...body].join('\n');
 };

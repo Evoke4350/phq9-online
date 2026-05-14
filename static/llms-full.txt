@@ -62,7 +62,7 @@ What Is the GAD-7? The Generalized Anxiety Disorder scale (GAD-7) is a seven-ite
 
 ## /history
 
-History {m.history_saved()} {m.history_optin_label()} download('phq9-history.json', 'application/json', exportJson())} class="rounded bg-[color:var(--color-accent)] px-3 py-1 text-white">{m.history_export_json()} download('phq9-history.csv', 'text/csv', exportCsv())} class="rounded bg-[color:var(--color-accent)] px-3 py-1 text-white">{m.history_export_csv()} { clearAll(); attempts = []; }} class="rounded border px-3 py-1">{m.history_clear_all()} Date Screener Score Band {#each attempts as a} {new Date(a.completedAt).toLocaleString()} {a.screenerId} {a.score} {a.band} { deleteAttempt(a.id); attempts = listAttempts(); }} aria-label="Delete" class="underline">Delete {/each}
+History {m.history_saved()} {m.history_optin_label()} download('phq9-history.json', 'application/json', exportJson())} class="rounded bg-[color:var(--color-accent)] px-3 py-1 text-white">{m.history_export_json()} download('phq9-history.csv', 'text/csv', exportCsv())} class="rounded bg-[color:var(--color-accent)] px-3 py-1 text-white">{m.history_export_csv()} { clearAll(); attempts = []; }} class="rounded border px-3 py-1">{m.history_clear_all()} Date Screener Score Band Actions {#each attempts as a} {new Date(a.completedAt).toLocaleString()} {a.screenerId} {a.score} {a.band} { deleteAttempt(a.id); attempts = listAttempts(); }} aria-label="Delete" class="underline">Delete {/each}
 
 ---
 

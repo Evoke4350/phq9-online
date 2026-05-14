@@ -4,7 +4,10 @@ import { join } from 'node:path';
 const ORIGIN = 'https://phq9.online';
 
 const sections = [
-  { title: 'Flagship', items: [{ path: '/', desc: 'PHQ-9 depression screening test (9 items, 0-27 scale)' }] },
+  {
+    title: 'Flagship',
+    items: [{ path: '/', desc: 'PHQ-9 depression screening test (9 items, 0-27 scale)' }]
+  },
   {
     title: 'Screeners',
     items: [
@@ -45,8 +48,7 @@ const llmsTxt = `# phq9.online
 
 ${sections
   .map(
-    (s) =>
-      `## ${s.title}\n\n${s.items.map((i) => `- [${i.desc}](${ORIGIN}${i.path})`).join('\n')}`
+    (s) => `## ${s.title}\n\n${s.items.map((i) => `- [${i.desc}](${ORIGIN}${i.path})`).join('\n')}`
   )
   .join('\n\n')}
 `;
@@ -74,9 +76,14 @@ function walk(dir: string): string[] {
 
 const files = walk(routesDir);
 const fullBody = files
-  .map((f) => `## ${f.replace(routesDir, '').replace('/+page.svelte', '') || '/'}\n\n${stripHtml(readFileSync(f, 'utf8'))}`)
+  .map(
+    (f) =>
+      `## ${f.replace(routesDir, '').replace('/+page.svelte', '') || '/'}\n\n${stripHtml(readFileSync(f, 'utf8'))}`
+  )
   .join('\n\n---\n\n');
 
 writeFileSync('static/llms-full.txt', `# phq9.online — full content\n\n${fullBody}`);
 
-console.log(`Wrote llms.txt (${llmsTxt.length} bytes) and llms-full.txt (${fullBody.length} bytes)`);
+console.log(
+  `Wrote llms.txt (${llmsTxt.length} bytes) and llms-full.txt (${fullBody.length} bytes)`
+);
