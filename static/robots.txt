@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /history
+
+Sitemap: https://phq9.online/sitemap.xml

@@ -1,0 +1,13 @@
+{
+  "name": "phq9.online",
+  "short_name": "phq9.online",
+  "description": "Free validated mental health self-assessments",
+  "start_url": "/",
+  "display": "minimal-ui",
+  "background_color": "#f8fafc",
+  "theme_color": "#0f172a",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" },
+    { "src": "/favicon-32.png", "sizes": "32x32", "type": "image/png" }
+  ]
+}
