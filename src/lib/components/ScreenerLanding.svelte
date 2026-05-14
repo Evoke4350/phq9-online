@@ -1,6 +1,6 @@
 <script lang="ts">
   import type { Screener } from '$lib/screeners/types';
-  import Screener from './Screener.svelte';
+  import ScreenerForm from './Screener.svelte';
   import AdSlot from './AdSlot.svelte';
   import { medicalWebPageSchema, quizSchema, breadcrumbSchema } from '$lib/schema';
 
@@ -37,7 +37,7 @@
   <h1 class="text-3xl font-bold">{ogTitle}</h1>
   <p class="mt-2 text-[color:var(--color-ink-2)]">{ogDescription}</p>
 
-  <Screener {config} />
+  <ScreenerForm {config} />
 
   <AdSlot slot="1234567890" />
 
