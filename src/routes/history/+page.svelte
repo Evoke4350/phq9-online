@@ -54,7 +54,7 @@
 
 <table class="mt-6 w-full text-left text-sm">
   <thead>
-    <tr><th>Date</th><th>Screener</th><th>Score</th><th>Band</th><th></th></tr>
+    <tr><th>Date</th><th>Screener</th><th>Score</th><th>Band</th><th><span class="sr-only">Actions</span></th></tr>
   </thead>
   <tbody>
     {#each attempts as a}
