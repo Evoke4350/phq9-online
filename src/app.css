@@ -28,11 +28,25 @@
 
 :root[data-theme='light'] {
   --color-base: oklch(98% 0.005 95);
+  --color-base-2: oklch(96% 0.01 95);
   --color-ink: oklch(20% 0.02 250);
+  --color-ink-2: oklch(40% 0.02 250);
+  --color-accent: oklch(55% 0.15 245);
+  --color-accent-2: oklch(45% 0.18 245);
+  --color-border: oklch(85% 0.01 250);
+  --color-crisis: oklch(55% 0.2 30);
+  --color-crisis-2: oklch(45% 0.22 30);
 }
 :root[data-theme='dark'] {
   --color-base: oklch(18% 0.015 250);
+  --color-base-2: oklch(24% 0.02 250);
   --color-ink: oklch(94% 0.01 95);
+  --color-ink-2: oklch(75% 0.01 95);
+  --color-accent: oklch(70% 0.15 245);
+  --color-accent-2: oklch(80% 0.18 245);
+  --color-border: oklch(35% 0.015 250);
+  --color-crisis: oklch(60% 0.2 30);
+  --color-crisis-2: oklch(70% 0.22 30);
 }
 
 html {
