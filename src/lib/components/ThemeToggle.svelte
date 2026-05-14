@@ -12,7 +12,13 @@
 
   onMount(() => {
     if (typeof document === 'undefined') return;
-    settings.subscribe((s) => apply(s.theme));
+    const unsubscribe = settings.subscribe((s) => {
+      // Only apply the theme to the DOM; do NOT call settings.update to avoid an
+      // infinite reactive loop (subscribe → apply → update → subscribe → …).
+      if (s.theme === 'auto') document.documentElement.removeAttribute('data-theme');
+      else document.documentElement.setAttribute('data-theme', s.theme);
+    });
+    return unsubscribe;
   });
 </script>
 
