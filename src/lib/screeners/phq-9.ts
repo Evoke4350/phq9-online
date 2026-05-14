@@ -1,11 +1,35 @@
 import type { Screener, SeverityBand } from './types';
 
 const bands: SeverityBand[] = [
-  { min: 0, max: 4, labelKey: 'severity_minimal', severity: 'minimal', actionKey: 'phq9_action_minimal' },
+  {
+    min: 0,
+    max: 4,
+    labelKey: 'severity_minimal',
+    severity: 'minimal',
+    actionKey: 'phq9_action_minimal'
+  },
   { min: 5, max: 9, labelKey: 'severity_mild', severity: 'mild', actionKey: 'phq9_action_mild' },
-  { min: 10, max: 14, labelKey: 'severity_moderate', severity: 'moderate', actionKey: 'phq9_action_moderate' },
-  { min: 15, max: 19, labelKey: 'severity_mod_severe', severity: 'mod-severe', actionKey: 'phq9_action_mod_severe' },
-  { min: 20, max: 27, labelKey: 'severity_severe', severity: 'severe', actionKey: 'phq9_action_severe' }
+  {
+    min: 10,
+    max: 14,
+    labelKey: 'severity_moderate',
+    severity: 'moderate',
+    actionKey: 'phq9_action_moderate'
+  },
+  {
+    min: 15,
+    max: 19,
+    labelKey: 'severity_mod_severe',
+    severity: 'mod-severe',
+    actionKey: 'phq9_action_mod_severe'
+  },
+  {
+    min: 20,
+    max: 27,
+    labelKey: 'severity_severe',
+    severity: 'severe',
+    actionKey: 'phq9_action_severe'
+  }
 ];
 
 export const phq9: Screener = {
@@ -35,10 +59,12 @@ export const phq9: Screener = {
   flagThreshold: 1,
   recommend: ['gad-7', 'wsas'],
   source: {
-    citation: 'Kroenke K, Spitzer RL, Williams JB. The PHQ-9: validity of a brief depression severity measure. J Gen Intern Med. 2001;16(9):606-613.',
+    citation:
+      'Kroenke K, Spitzer RL, Williams JB. The PHQ-9: validity of a brief depression severity measure. J Gen Intern Med. 2001;16(9):606-613.',
     doi: '10.1046/j.1525-1497.2001.016009606.x',
     url: 'https://www.phqscreeners.com/',
-    license: 'Public domain; developed by Pfizer Inc. with educational grant. No permission required for reproduction.',
+    license:
+      'Public domain; developed by Pfizer Inc. with educational grant. No permission required for reproduction.',
     publicDomain: true,
     officialTranslationsUrl: 'https://www.phqscreeners.com/select-screener',
     yearPublished: 1999

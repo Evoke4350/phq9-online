@@ -1,10 +1,4 @@
-export type Severity =
-  | 'none'
-  | 'minimal'
-  | 'mild'
-  | 'moderate'
-  | 'mod-severe'
-  | 'severe';
+export type Severity = 'none' | 'minimal' | 'mild' | 'moderate' | 'mod-severe' | 'severe';
 
 export type ScreenerDomain =
   | 'depression'

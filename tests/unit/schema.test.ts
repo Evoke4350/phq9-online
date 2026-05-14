@@ -1,5 +1,12 @@
 import { describe, it, expect } from 'vitest';
-import { websiteSchema, organizationSchema, faqPageSchema, medicalWebPageSchema, quizSchema, breadcrumbSchema } from '$lib/schema';
+import {
+  websiteSchema,
+  organizationSchema,
+  faqPageSchema,
+  medicalWebPageSchema,
+  quizSchema,
+  breadcrumbSchema
+} from '$lib/schema';
 
 describe('schema', () => {
   it('websiteSchema has @type WebSite', () => {
@@ -26,7 +33,11 @@ describe('schema', () => {
   });
 
   it('medicalWebPageSchema has Patient audience', () => {
-    const s = medicalWebPageSchema({ url: 'https://phq9.online/', name: 'Test', description: 'Test' });
+    const s = medicalWebPageSchema({
+      url: 'https://phq9.online/',
+      name: 'Test',
+      description: 'Test'
+    });
     expect(s.medicalAudience.audienceType).toBe('Patient');
   });
 

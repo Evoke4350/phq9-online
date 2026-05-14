@@ -1,8 +1,20 @@
 import type { Screener, SeverityBand } from './types';
 
 const bands: SeverityBand[] = [
-  { min: 0, max: 2, labelKey: 'phq2_negative', severity: 'none', actionKey: 'phq2_action_negative' },
-  { min: 3, max: 6, labelKey: 'phq2_positive', severity: 'moderate', actionKey: 'phq2_action_positive' }
+  {
+    min: 0,
+    max: 2,
+    labelKey: 'phq2_negative',
+    severity: 'none',
+    actionKey: 'phq2_action_negative'
+  },
+  {
+    min: 3,
+    max: 6,
+    labelKey: 'phq2_positive',
+    severity: 'moderate',
+    actionKey: 'phq2_action_positive'
+  }
 ];
 
 export const phq2: Screener = {
@@ -20,13 +32,20 @@ export const phq2: Screener = {
   bands,
   recommend: ['phq-9'],
   source: {
-    citation: 'Kroenke K, Spitzer RL, Williams JB. The Patient Health Questionnaire-2: validity of a two-item depression screener. Med Care. 2003;41(11):1284-1292.',
+    citation:
+      'Kroenke K, Spitzer RL, Williams JB. The Patient Health Questionnaire-2: validity of a two-item depression screener. Med Care. 2003;41(11):1284-1292.',
     doi: '10.1097/01.MLR.0000093487.78664.3C',
     license: 'Public domain; Pfizer Inc.',
     publicDomain: true,
     yearPublished: 2003
   },
-  score(answers) { return answers.reduce((s, v) => s + v, 0); },
-  bandFor(score) { return bands.find((b) => score >= b.min && score <= b.max) ?? bands[bands.length - 1]!; },
-  flagFired() { return false; }
+  score(answers) {
+    return answers.reduce((s, v) => s + v, 0);
+  },
+  bandFor(score) {
+    return bands.find((b) => score >= b.min && score <= b.max) ?? bands[bands.length - 1]!;
+  },
+  flagFired() {
+    return false;
+  }
 };
