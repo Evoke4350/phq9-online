@@ -1,0 +1,33 @@
+# phq9.online
+
+> Free validated mental health self-assessments. Public-domain instruments only, client-side scoring, no PII collection.
+
+## Flagship
+
+- [PHQ-9 depression screening test (9 items, 0-27 scale)](https://phq9.online/)
+
+## Screeners
+
+- [PHQ-2 (2-item depression quick screen)](https://phq9.online/phq-2)
+- [GAD-7 (7-item generalized anxiety)](https://phq9.online/gad-7)
+- [CES-D (20-item NIH epidemiological depression)](https://phq9.online/ces-d)
+- [PROMIS Depression Short Form 8a (NIH)](https://phq9.online/promis-depression)
+- [Work and Social Adjustment Scale (5-item functional impairment)](https://phq9.online/wsas)
+- [WHO-5 Wellbeing Index](https://phq9.online/who-5)
+
+## Reference
+
+- [PHQ-9 history, validation, and citations](https://phq9.online/about-phq9)
+- [Universal scoring guide](https://phq9.online/scoring)
+- [Severity band interpretation](https://phq9.online/interpretation)
+- [Frequently asked questions](https://phq9.online/faq)
+- [Crisis resources by country](https://phq9.online/crisis)
+- [Side-by-side comparison of all screeners](https://phq9.online/compare)
+
+## Site
+
+- [About this site](https://phq9.online/about)
+- [Medical disclaimer](https://phq9.online/disclaimer)
+- [Privacy policy](https://phq9.online/privacy)
+- [Terms of service](https://phq9.online/terms)
+- [Contact](https://phq9.online/contact)
