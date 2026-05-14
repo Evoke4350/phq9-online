@@ -23,7 +23,11 @@ const load = (): Settings => {
 
 const persist = (s: Settings): void => {
   if (!('localStorage' in globalThis)) return;
-  try { localStorage.setItem(SETTINGS_KEY, JSON.stringify(s)); } catch { /* ignore */ }
+  try {
+    localStorage.setItem(SETTINGS_KEY, JSON.stringify(s));
+  } catch {
+    /* ignore */
+  }
 };
 
 const createSettings = (): Writable<Settings> => {

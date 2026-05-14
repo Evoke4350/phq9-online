@@ -26,7 +26,7 @@
   {@html ld
     .map(
       (b) =>
-        `<script type="application/ld+json">${JSON.stringify(b).replace(/</g, '\\u003c')}</script>`
+        `<script type="application/ld+json">${JSON.stringify(b).replace(/</g, '\\u003c')}<\/script>`
     )
     .join('')}
 </svelte:head>

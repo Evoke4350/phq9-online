@@ -1,7 +1,27 @@
 import { test, expect } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
 
-const routes = ['/', '/phq-2', '/gad-7', '/ces-d', '/promis-depression', '/wsas', '/who-5', '/faq', '/crisis', '/about', '/privacy', '/terms', '/history', '/compare', '/disclaimer', '/about-phq9', '/scoring', '/interpretation', '/contact'];
+const routes = [
+  '/',
+  '/phq-2',
+  '/gad-7',
+  '/ces-d',
+  '/promis-depression',
+  '/wsas',
+  '/who-5',
+  '/faq',
+  '/crisis',
+  '/about',
+  '/privacy',
+  '/terms',
+  '/history',
+  '/compare',
+  '/disclaimer',
+  '/about-phq9',
+  '/scoring',
+  '/interpretation',
+  '/contact'
+];
 
 for (const route of routes) {
   test(`a11y: ${route}`, async ({ page }) => {

@@ -3,7 +3,6 @@
   import CrisisBanner from './CrisisBanner.svelte';
   import * as m from '$paraglide/messages';
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   let { screener, score, band, flagged } = $props<{
     screener: Screener;
     score: number;
