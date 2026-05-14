@@ -10,7 +10,7 @@
       <a class="underline" href="/privacy">Privacy</a> ·
       <a class="underline" href="/terms">Terms</a> ·
       <a class="underline" href="/contact">Contact</a> ·
-      <a class="underline" href="https://github.com/nathanib/phq9-online">Source</a>
+      <a class="underline" href="https://github.com/Evoke4350/phq9-online">Source</a>
     </p>
     <p class="mt-2">© {new Date().getFullYear()} phq9.online · MIT licensed</p>
   </div>

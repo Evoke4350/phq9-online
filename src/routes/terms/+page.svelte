@@ -71,7 +71,7 @@
     <strong>MIT Licence</strong>. You are free to use, copy, modify, merge, publish, distribute,
     sublicence, and sell copies of the software in accordance with the terms of the MIT Licence,
     which is reproduced in full in the source repository at
-    <a href="https://github.com/nathanib/phq9-online" rel="noopener noreferrer" target="_blank">github.com/nathanib/phq9-online</a>.
+    <a href="https://github.com/Evoke4350/phq9-online" rel="noopener noreferrer" target="_blank">github.com/Evoke4350/phq9-online</a>.
   </p>
   <p>
     The screening instruments reproduced on the Site (PHQ-9, PHQ-2, GAD-7, CES-D, PROMIS

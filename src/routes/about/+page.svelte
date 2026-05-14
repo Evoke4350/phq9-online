@@ -82,7 +82,7 @@
   <h2>Source Code</h2>
   <p>
     The full source code for phq9.online is open and available at
-    <a href="https://github.com/nathanib/phq9-online" rel="noopener noreferrer" target="_blank">github.com/nathanib/phq9-online</a>.
+    <a href="https://github.com/Evoke4350/phq9-online" rel="noopener noreferrer" target="_blank">github.com/Evoke4350/phq9-online</a>.
     The code is released under the MIT licence. Contributions, bug reports, and suggestions are
     welcome via GitHub Issues.
   </p>

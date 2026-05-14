@@ -43,7 +43,7 @@
 
   <p>
     For bug reports, feature requests, or technical issues, the preferred channel is
-    <a href="https://github.com/nathanib/phq9-online/issues" rel="noopener noreferrer" target="_blank">GitHub Issues</a>.
+    <a href="https://github.com/Evoke4350/phq9-online/issues" rel="noopener noreferrer" target="_blank">GitHub Issues</a>.
     Opening an issue there allows others to see the discussion and contribute, and makes it
     easier to track progress on any reported problems.
   </p>

@@ -1,6 +1,6 @@
 # phq9.online
 
-[![CI](https://github.com/nathanib/phq9-online/actions/workflows/ci.yml/badge.svg)](https://github.com/nathanib/phq9-online/actions/workflows/ci.yml)
+[![CI](https://github.com/Evoke4350/phq9-online/actions/workflows/ci.yml/badge.svg)](https://github.com/Evoke4350/phq9-online/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 Free, ad-supported, open-source web app hosting **PHQ-9** and six companion public-domain mental health screeners.
@@ -72,4 +72,4 @@ MIT. See [LICENSE](LICENSE).
 
 ## Sponsor
 
-[GitHub Sponsors](https://github.com/sponsors/nathanib) · Ko-fi (link tbd)
+[GitHub Sponsors](https://github.com/sponsors/Evoke4350) · Ko-fi (link tbd)
