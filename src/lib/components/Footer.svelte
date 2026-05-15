@@ -10,7 +10,7 @@
       <p class="tagline">{m.footer_disclaimer()}</p>
     </div>
     <div class="col">
-      <h4>Screeners</h4>
+      <h2 class="col-title">Screeners</h2>
       <ul>
         <li><a href="/">PHQ-9</a></li>
         <li><a href="/phq-2">PHQ-2</a></li>
@@ -23,7 +23,7 @@
       </ul>
     </div>
     <div class="col">
-      <h4>Reference</h4>
+      <h2 class="col-title">Reference</h2>
       <ul>
         <li><a href="/about-phq9">About PHQ-9</a></li>
         <li><a href="/scoring">Scoring guide</a></li>
@@ -33,7 +33,7 @@
       </ul>
     </div>
     <div class="col">
-      <h4>About</h4>
+      <h2 class="col-title">About</h2>
       <ul>
         <li><a href="/about">About the site</a></li>
         <li><a href="/disclaimer">Disclaimer</a></li>
@@ -81,7 +81,7 @@
     max-width: 22rem;
     margin: 0;
   }
-  h4 {
+  .col-title {
     font-family: var(--font-sans);
     font-size: 0.75rem;
     text-transform: uppercase;

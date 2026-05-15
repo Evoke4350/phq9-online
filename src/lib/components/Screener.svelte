@@ -119,7 +119,7 @@
                 value={v}
                 checked={answers[currentIdx] === v}
                 onchange={() => chooseAnswer(v)}
-                class="sr-only"
+                class="choice-input"
                 aria-label={t(config.scale.labelKeys[vi]!)}
               />
               <span class="choice-label">{t(config.scale.labelKeys[vi]!)}</span>
@@ -232,6 +232,7 @@
     margin: 0 auto;
   }
   .choice {
+    position: relative;
     display: block;
     cursor: pointer;
     border: 1px solid var(--color-border);
@@ -255,18 +256,21 @@
     outline: 2px solid var(--color-accent);
     outline-offset: 2px;
   }
+  .choice-input {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+  }
   .choice-label {
+    position: relative;
     color: var(--color-ink);
     font-size: 1rem;
     font-weight: 500;
-  }
-  .sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
-    white-space: nowrap;
+    pointer-events: none;
   }
   .controls {
     display: flex;
