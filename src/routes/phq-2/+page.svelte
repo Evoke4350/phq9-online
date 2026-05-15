@@ -1,7 +1,22 @@
 <script lang="ts">
   import ScreenerLanding from '$lib/components/ScreenerLanding.svelte';
+  import Hero from '$lib/components/Hero.svelte';
   import { phq2 } from '$lib/screeners/phq-2';
 </script>
+
+<Hero
+  title="A quick check, in two questions."
+  subtitle="The PHQ-2 is the 2-item primary-care screener for depression. Use it as a fast first check before the full PHQ-9."
+  ctaLabel="Start the test"
+  ctaHref="#quiz"
+  tiles={[
+    { value: '2', label: 'questions' },
+    { value: '< 1 min', label: 'to complete' },
+    { value: 'Since 2003', label: 'validated' }
+  ]}
+/>
+
+<div id="quiz"></div>
 
 <ScreenerLanding
   config={phq2}

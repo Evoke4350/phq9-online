@@ -1,7 +1,22 @@
 <script lang="ts">
   import ScreenerLanding from '$lib/components/ScreenerLanding.svelte';
+  import Hero from '$lib/components/Hero.svelte';
   import { promisDepression } from '$lib/screeners/promis-depression';
 </script>
+
+<Hero
+  title="Modern psychometrics, free."
+  subtitle="PROMIS Depression 8a is an 8-item NIH-developed measure with modern IRT calibration."
+  ctaLabel="Start the test"
+  ctaHref="#quiz"
+  tiles={[
+    { value: '8', label: 'questions' },
+    { value: '~2 min', label: 'to complete' },
+    { value: 'Since 2011', label: 'validated' }
+  ]}
+/>
+
+<div id="quiz"></div>
 
 <ScreenerLanding
   config={promisDepression}

@@ -1,7 +1,22 @@
 <script lang="ts">
   import ScreenerLanding from '$lib/components/ScreenerLanding.svelte';
+  import Hero from '$lib/components/Hero.svelte';
   import { wsas } from '$lib/screeners/wsas';
 </script>
+
+<Hero
+  title="How impaired is your daily life?"
+  subtitle="The Work and Social Adjustment Scale measures functional impairment in 5 items. NHS IAPT minimum dataset."
+  ctaLabel="Start the test"
+  ctaHref="#quiz"
+  tiles={[
+    { value: '5', label: 'questions' },
+    { value: '~1 min', label: 'to complete' },
+    { value: 'Since 2002', label: 'validated' }
+  ]}
+/>
+
+<div id="quiz"></div>
 
 <ScreenerLanding
   config={wsas}
