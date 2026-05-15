@@ -44,7 +44,7 @@
 
 <article>
   <h1 class="text-3xl font-bold">{ogTitle}</h1>
-  <p class="mt-2 text-[color:var(--color-ink-2)]">{ogDescription}</p>
+  <p class="mt-2 text-[color:var(--color-ink-muted)]">{ogDescription}</p>
 
   <ScreenerForm {config} />
 
@@ -54,7 +54,7 @@
 
   {#if !suppressed}<AdSlot slot="2345678901" />{/if}
 
-  <section class="mt-8 text-xs text-[color:var(--color-ink-2)]">
+  <section class="mt-8 text-xs text-[color:var(--color-ink-muted)]">
     <strong>Source:</strong> {config.source.citation}
     {#if config.source.doi}<br />doi:{config.source.doi}{/if}
     <br /><strong>License:</strong> {config.source.license}

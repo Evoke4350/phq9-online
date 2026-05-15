@@ -3,7 +3,7 @@
 </script>
 
 <footer class="mt-16 border-t border-[color:var(--color-border)] py-8">
-  <div class="mx-auto max-w-5xl px-4 text-sm text-[color:var(--color-ink-2)]">
+  <div class="mx-auto max-w-5xl px-4 text-sm text-[color:var(--color-ink-muted)]">
     <p class="mb-2">{m.footer_disclaimer()}</p>
     <p>
       <a class="underline" href="/disclaimer">Disclaimer</a> ·

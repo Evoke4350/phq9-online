@@ -52,7 +52,7 @@
         </legend>
         <div class="mt-2 grid gap-2 sm:grid-cols-2">
           {#each config.scale.values as v, vi}
-            <label class="flex items-center gap-2 rounded p-2 hover:bg-[color:var(--color-base-2)] cursor-pointer">
+            <label class="flex items-center gap-2 rounded p-2 hover:bg-[color:var(--color-bg-elevated)] cursor-pointer">
               <input
                 type="radio"
                 name={`q${idx}`}

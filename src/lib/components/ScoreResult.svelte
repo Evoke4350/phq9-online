@@ -20,7 +20,7 @@
   <p class="mt-2 text-lg">
     <span class="font-medium">{t(band.labelKey)}</span>
   </p>
-  <p class="mt-4 max-w-prose text-[color:var(--color-ink-2)]">
+  <p class="mt-4 max-w-prose text-[color:var(--color-ink-muted)]">
     {t(band.actionKey)}
   </p>
 </section>

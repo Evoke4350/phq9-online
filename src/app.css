@@ -1,52 +1,78 @@
+@import '@fontsource-variable/fraunces';
+@import '@fontsource-variable/inter';
 @import 'tailwindcss';
 
 @theme {
-  --color-base: oklch(98% 0.005 95);
-  --color-base-2: oklch(96% 0.01 95);
-  --color-ink: oklch(20% 0.02 250);
-  --color-ink-2: oklch(40% 0.02 250);
-  --color-accent: oklch(55% 0.15 245);
-  --color-accent-2: oklch(45% 0.18 245);
-  --color-crisis: oklch(55% 0.2 30);
-  --color-crisis-2: oklch(45% 0.22 30);
-  --color-border: oklch(85% 0.01 250);
-  --font-sans: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --color-bg: oklch(20% 0.03 260);
+  --color-bg-elevated: oklch(26% 0.035 260);
+  --color-card: oklch(24% 0.035 260);
+  --color-ink: oklch(95% 0.02 80);
+  --color-ink-muted: oklch(72% 0.02 80);
+  --color-accent: oklch(74% 0.16 38);
+  --color-accent-soft: oklch(82% 0.1 38);
+  --color-highlight: oklch(85% 0.13 85);
+  --color-crisis: oklch(65% 0.18 30);
+  --color-crisis-soft: oklch(78% 0.1 30);
+  --color-success: oklch(70% 0.12 150);
+  --color-border: oklch(34% 0.02 260);
+
+  --font-sans:
+    'Inter Variable', 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto,
+    sans-serif;
+  --font-display: 'Fraunces Variable', 'Fraunces', Georgia, 'Times New Roman', serif;
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  --ease-out-soft: cubic-bezier(0.16, 1, 0.3, 1);
+  --motion-fast: 200ms;
+  --motion-normal: 350ms;
+  --motion-slow: 800ms;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-base: oklch(18% 0.015 250);
-    --color-base-2: oklch(24% 0.02 250);
-    --color-ink: oklch(94% 0.01 95);
-    --color-ink-2: oklch(75% 0.01 95);
-    --color-accent: oklch(70% 0.15 245);
-    --color-accent-2: oklch(80% 0.18 245);
-    --color-border: oklch(35% 0.015 250);
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme='dark']) {
+    --color-bg: oklch(97% 0.015 80);
+    --color-bg-elevated: oklch(94% 0.02 80);
+    --color-card: oklch(95% 0.02 80);
+    --color-ink: oklch(22% 0.03 260);
+    --color-ink-muted: oklch(45% 0.02 260);
+    --color-accent: oklch(58% 0.18 35);
+    --color-accent-soft: oklch(70% 0.14 38);
+    --color-highlight: oklch(65% 0.15 85);
+    --color-crisis: oklch(55% 0.2 30);
+    --color-crisis-soft: oklch(85% 0.08 30);
+    --color-success: oklch(55% 0.15 150);
+    --color-border: oklch(88% 0.015 80);
   }
 }
 
 :root[data-theme='light'] {
-  --color-base: oklch(98% 0.005 95);
-  --color-base-2: oklch(96% 0.01 95);
-  --color-ink: oklch(20% 0.02 250);
-  --color-ink-2: oklch(40% 0.02 250);
-  --color-accent: oklch(55% 0.15 245);
-  --color-accent-2: oklch(45% 0.18 245);
-  --color-border: oklch(85% 0.01 250);
+  --color-bg: oklch(97% 0.015 80);
+  --color-bg-elevated: oklch(94% 0.02 80);
+  --color-card: oklch(95% 0.02 80);
+  --color-ink: oklch(22% 0.03 260);
+  --color-ink-muted: oklch(45% 0.02 260);
+  --color-accent: oklch(58% 0.18 35);
+  --color-accent-soft: oklch(70% 0.14 38);
+  --color-highlight: oklch(65% 0.15 85);
   --color-crisis: oklch(55% 0.2 30);
-  --color-crisis-2: oklch(45% 0.22 30);
+  --color-crisis-soft: oklch(85% 0.08 30);
+  --color-success: oklch(55% 0.15 150);
+  --color-border: oklch(88% 0.015 80);
 }
+
 :root[data-theme='dark'] {
-  --color-base: oklch(18% 0.015 250);
-  --color-base-2: oklch(24% 0.02 250);
-  --color-ink: oklch(94% 0.01 95);
-  --color-ink-2: oklch(75% 0.01 95);
-  --color-accent: oklch(70% 0.15 245);
-  --color-accent-2: oklch(80% 0.18 245);
-  --color-border: oklch(35% 0.015 250);
-  --color-crisis: oklch(60% 0.2 30);
-  --color-crisis-2: oklch(70% 0.22 30);
+  --color-bg: oklch(20% 0.03 260);
+  --color-bg-elevated: oklch(26% 0.035 260);
+  --color-card: oklch(24% 0.035 260);
+  --color-ink: oklch(95% 0.02 80);
+  --color-ink-muted: oklch(72% 0.02 80);
+  --color-accent: oklch(74% 0.16 38);
+  --color-accent-soft: oklch(82% 0.1 38);
+  --color-highlight: oklch(85% 0.13 85);
+  --color-crisis: oklch(65% 0.18 30);
+  --color-crisis-soft: oklch(78% 0.1 30);
+  --color-success: oklch(70% 0.12 150);
+  --color-border: oklch(34% 0.02 260);
 }
 
 html {
@@ -55,14 +81,91 @@ html {
 body {
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
-  background: var(--color-base);
+  background: var(--color-bg);
   color: var(--color-ink);
+  font-feature-settings:
+    'ss01' 1,
+    'cv11' 1;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.display {
+  font-family: var(--font-display);
+  letter-spacing: -0.015em;
+  font-feature-settings: 'opsz' auto;
 }
 :focus-visible {
   outline: 2px solid var(--color-accent);
   outline-offset: 2px;
   border-radius: 4px;
 }
+
+.card {
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: 1.25rem;
+  padding: 1.5rem;
+}
+@media (min-width: 768px) {
+  .card {
+    padding: 2rem;
+  }
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.5rem;
+  border-radius: 999px;
+  background: var(--color-accent);
+  color: oklch(15% 0.02 260);
+  font-weight: 600;
+  transition:
+    transform var(--motion-fast) var(--ease-out-soft),
+    background var(--motion-fast) var(--ease-out-soft),
+    box-shadow var(--motion-fast) var(--ease-out-soft);
+  box-shadow: 0 4px 16px color-mix(in oklch, var(--color-accent) 30%, transparent);
+}
+.btn-primary:hover {
+  background: var(--color-accent-soft);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px color-mix(in oklch, var(--color-accent) 40%, transparent);
+}
+.btn-primary:active {
+  transform: translateY(0);
+}
+.btn-primary:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.625rem 1.25rem;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--color-ink);
+  border: 1px solid var(--color-border);
+  transition:
+    background var(--motion-fast) var(--ease-out-soft),
+    border-color var(--motion-fast) var(--ease-out-soft);
+}
+.btn-ghost:hover {
+  background: var(--color-bg-elevated);
+  border-color: var(--color-accent-soft);
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

@@ -2,8 +2,8 @@
   import * as m from '$paraglide/messages';
 </script>
 
-<aside role="alert" aria-live="assertive" class="rounded-lg border-2 border-[color:var(--color-crisis)] bg-[color:var(--color-base-2)] p-4 mb-6">
-  <h2 class="text-lg font-semibold text-[color:var(--color-crisis-2)]">{m.crisis_banner_title()}</h2>
+<aside role="alert" aria-live="assertive" class="rounded-lg border-2 border-[color:var(--color-crisis)] bg-[color:var(--color-bg-elevated)] p-4 mb-6">
+  <h2 class="text-lg font-semibold text-[color:var(--color-crisis-soft)]">{m.crisis_banner_title()}</h2>
   <ul class="mt-3 space-y-1 text-sm">
     <li>{m.crisis_banner_us_988()}</li>
     <li>{m.crisis_banner_text_line()}</li>
