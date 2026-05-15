@@ -1,23 +1,18 @@
 <script lang="ts">
   import { onMount } from 'svelte';
-  import { adsEnabled, adsSuppressed } from '$lib/stores';
+  import { adsEnabled } from '$lib/stores';
 
   let { slot, format = 'auto' } = $props<{ slot: string; format?: 'auto' | 'fluid' }>();
   let mounted = $state(false);
   let enabled = $state(false);
-  let suppressed = $state(false);
   let pushed = $state(false);
 
-  const visible = $derived(mounted && enabled && !suppressed);
+  const visible = $derived(mounted && enabled);
 
   onMount(() => {
     mounted = true;
-    const unsubEnabled = adsEnabled.subscribe((v) => { enabled = v; });
-    const unsubSuppressed = adsSuppressed.subscribe((v) => { suppressed = v; });
-    return () => {
-      unsubEnabled();
-      unsubSuppressed();
-    };
+    const unsub = adsEnabled.subscribe((v) => { enabled = v; });
+    return unsub;
   });
 
   $effect(() => {

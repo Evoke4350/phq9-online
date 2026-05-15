@@ -1,7 +1,9 @@
 <script lang="ts">
+  import { onMount } from 'svelte';
   import type { Screener } from '$lib/screeners/types';
   import ScreenerForm from './Screener.svelte';
   import AdSlot from './AdSlot.svelte';
+  import { adsSuppressed } from '$lib/stores';
   import { medicalWebPageSchema, quizSchema, breadcrumbSchema } from '$lib/schema';
 
   let { config, ogTitle, ogDescription, url, children, breadcrumbs } = $props<{
@@ -18,6 +20,13 @@
     quizSchema({ name: ogTitle, url, about: config.domain }),
     breadcrumbSchema(breadcrumbs)
   ];
+
+  let suppressed = $state(false);
+
+  onMount(() => {
+    const unsub = adsSuppressed.subscribe((v) => { suppressed = v; });
+    return unsub;
+  });
 </script>
 
 <svelte:head>
@@ -39,11 +48,11 @@
 
   <ScreenerForm {config} />
 
-  <AdSlot slot="1234567890" />
+  {#if !suppressed}<AdSlot slot="1234567890" />{/if}
 
   {@render children?.()}
 
-  <AdSlot slot="2345678901" />
+  {#if !suppressed}<AdSlot slot="2345678901" />{/if}
 
   <section class="mt-8 text-xs text-[color:var(--color-ink-2)]">
     <strong>Source:</strong> {config.source.citation}
