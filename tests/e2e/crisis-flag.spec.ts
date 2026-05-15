@@ -9,5 +9,5 @@ test('PHQ-9 Q9 >= 1 triggers crisis banner and suppresses ads', async ({ page })
   await page.getByRole('button', { name: /see result/i }).click();
 
   await expect(page.getByRole('alert')).toContainText(/help is available now/i);
-  await expect(page.locator('ins.adsbygoogle')).toHaveCount(0);
+  await expect(page.locator('[data-testid="adsense-slot"]')).toHaveCount(0);
 });

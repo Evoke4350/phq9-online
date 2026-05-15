@@ -36,5 +36,6 @@
     data-ad-slot={slot}
     data-ad-format={format}
     data-full-width-responsive="true"
+    data-testid="adsense-slot"
   ></ins>
 {/if}
