@@ -1,7 +1,22 @@
 <script lang="ts">
   import ScreenerLanding from '$lib/components/ScreenerLanding.svelte';
+  import Hero from '$lib/components/Hero.svelte';
   import { phq9 } from '$lib/screeners/phq-9';
 </script>
+
+<Hero
+  title="How are you feeling, really?"
+  subtitle="The PHQ-9 is a 2-minute, 9-question depression check developed by Pfizer and used by clinicians worldwide. Free. Private. No account."
+  ctaLabel="Start the 2-minute test"
+  ctaHref="#quiz"
+  tiles={[
+    { value: '9', label: 'questions' },
+    { value: '~2 min', label: 'to complete' },
+    { value: 'Since 1999', label: 'validated' }
+  ]}
+/>
+
+<div id="quiz"></div>
 
 <ScreenerLanding
   config={phq9}

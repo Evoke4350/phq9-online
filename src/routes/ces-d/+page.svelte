@@ -1,7 +1,22 @@
 <script lang="ts">
   import ScreenerLanding from '$lib/components/ScreenerLanding.svelte';
+  import Hero from '$lib/components/Hero.svelte';
   import { cesd } from '$lib/screeners/ces-d';
 </script>
+
+<Hero
+  title="An NIH classic, still useful."
+  subtitle="The CES-D is a 20-item depression scale from the National Institute of Mental Health, used in research and clinical practice since 1977."
+  ctaLabel="Start the test"
+  ctaHref="#quiz"
+  tiles={[
+    { value: '20', label: 'questions' },
+    { value: '~5 min', label: 'to complete' },
+    { value: 'Since 1977', label: 'validated' }
+  ]}
+/>
+
+<div id="quiz"></div>
 
 <ScreenerLanding
   config={cesd}

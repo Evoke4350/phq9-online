@@ -1,7 +1,22 @@
 <script lang="ts">
   import ScreenerLanding from '$lib/components/ScreenerLanding.svelte';
+  import Hero from '$lib/components/Hero.svelte';
   import { gad7 } from '$lib/screeners/gad-7';
 </script>
+
+<Hero
+  title="When worry won't quiet down."
+  subtitle="The GAD-7 is a 7-item generalized anxiety screening tool developed by Pfizer in 2006. It pairs naturally with the PHQ-9."
+  ctaLabel="Start the test"
+  ctaHref="#quiz"
+  tiles={[
+    { value: '7', label: 'questions' },
+    { value: '~2 min', label: 'to complete' },
+    { value: 'Since 2006', label: 'validated' }
+  ]}
+/>
+
+<div id="quiz"></div>
 
 <ScreenerLanding
   config={gad7}

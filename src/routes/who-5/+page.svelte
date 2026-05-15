@@ -1,7 +1,22 @@
 <script lang="ts">
   import ScreenerLanding from '$lib/components/ScreenerLanding.svelte';
+  import Hero from '$lib/components/Hero.svelte';
   import { who5 } from '$lib/screeners/who-5';
 </script>
+
+<Hero
+  title="How is your wellbeing?"
+  subtitle="The WHO-5 Well-Being Index measures positive wellbeing across 5 items, on a 0-100 scale."
+  ctaLabel="Start the test"
+  ctaHref="#quiz"
+  tiles={[
+    { value: '5', label: 'questions' },
+    { value: '~1 min', label: 'to complete' },
+    { value: 'Since 1998', label: 'validated' }
+  ]}
+/>
+
+<div id="quiz"></div>
 
 <ScreenerLanding
   config={who5}

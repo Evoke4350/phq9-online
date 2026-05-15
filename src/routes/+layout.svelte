@@ -4,6 +4,7 @@
   import { i18n } from '$lib/i18n';
   import Nav from '$lib/components/Nav.svelte';
   import Footer from '$lib/components/Footer.svelte';
+  import BackgroundMesh from '$lib/components/BackgroundMesh.svelte';
   import { websiteSchema, organizationSchema } from '$lib/schema';
   const globalLd = [websiteSchema(), organizationSchema()]
     .map((b) => {
@@ -27,6 +28,7 @@
 </svelte:head>
 
 <ParaglideJS {i18n}>
+  <BackgroundMesh />
   <Nav />
   <main class="mx-auto max-w-5xl px-4 py-8">
     {@render children?.()}
